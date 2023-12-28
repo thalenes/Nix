@@ -52,12 +52,11 @@
       layout = "latam";
       excludePackages = [ pkgs.xterm ];
   };
-
-  hardware.opengl = {
-     enable = true;
-     driSupport32Bit = true;
-    };
   
+  hardware = {
+     opengl.enable = true;
+     opengl.driSupport32Bit = true;
+    };
 
   #Sound
   sound.enable = true;
@@ -80,8 +79,6 @@
      alacritty
      feh
      sxhkd
-     picom
-     eww
      polybar
      rofi
      xfce.thunar
@@ -90,29 +87,27 @@
      scrot
      flameshot
      pavucontrol
-    
+
      #User
      brave
      spotify
      discord
      telegram-desktop
-     steam
-     wineWowPackages.staging
-     winetricks
-     vulkan-tools
+     
 
      #Dev
      emacs
-     vscode
-       
+
      #Dev Dependences
+     jre8
      jdk17
+     
      rustc
      cargo
      rust-analyzer
+     gcc
 
      #CLI
-     neofetch
      git
      wget
      curl
@@ -129,6 +124,9 @@
   programs.fish = {
    enable = true;
   };
+
+  #Git
+  programs.ssh.enableAskPassword = false;
 
   #Fonts
   fonts.packages = with pkgs; [
