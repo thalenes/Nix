@@ -17,9 +17,16 @@
   
   # List of user programs
   home.packages = with pkgs; [
+    vulkan-tools
     unstable.lutris
-    appimage-run
+    steam
+    qbittorrent
+    wineWowPackages.staging
+    winetricks
+    vulkan-tools
+    neofetch
     prismlauncher
+    heroic
   ];
   
   
