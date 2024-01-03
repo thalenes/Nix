@@ -93,37 +93,17 @@
      spotify
      discord
      telegram-desktop
-     
-
-     #Dev
-     emacs
-
-     #Dev Dependences
-     jre8
-     jdk17
-     
-     rustc
-     cargo
-     rust-analyzer
-     gcc
 
      #CLI
      git
      wget
      curl
      htop
-     oh-my-fish
 
      #GTK
-     tokyo-night-gtk
      papirus-icon-theme
      lxappearance
    ];
-
-  #Shell
-  programs.fish = {
-   enable = true;
-  };
 
   #Git
   programs.ssh.enableAskPassword = false;
