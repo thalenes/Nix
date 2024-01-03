@@ -46,7 +46,7 @@
   #X11 (Because Wayland sucks, Chad Xorg+NVIDIA)
   services.xserver = {
       enable = true;
-      displayManager.sddm.enable = true;
+      displayManager.startx.enable = true;
       windowManager.bspwm.enable = true; 
       videoDrivers = [ "nvidia" ];  
       layout = "latam";
