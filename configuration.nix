@@ -5,6 +5,9 @@
     [ 
       ./hardware-configuration.nix
     ];  
+  #Kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   #Performance
   powerManagement.cpuFreqGovernor = "performance";
   
@@ -76,20 +79,20 @@
   #PKG
   environment.systemPackages = with pkgs; [
      #System
-     alacritty
+     kitty
      feh
      sxhkd
      polybar
+     picom
      rofi
      xfce.thunar
      xfce.thunar-volman
      gnome.file-roller
-     scrot
      flameshot
      pavucontrol
 
      #User
-     brave
+     ungoogled-chromium
      spotify
      discord
      telegram-desktop
@@ -102,6 +105,7 @@
 
      #GTK
      papirus-icon-theme
+     tokyo-night-gtk
      lxappearance
    ];
 
