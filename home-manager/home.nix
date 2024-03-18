@@ -21,6 +21,7 @@
     lutris
     steam
     heroic
+    libreoffice-still
   ];
   
   
