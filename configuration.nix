@@ -21,7 +21,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true;
   boot.loader.grub.devices =  ["nodev"];
- # boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
 
   #Bluetooth
@@ -49,8 +49,9 @@
   #X11 (Because Wayland sucks, Chad Xorg+NVIDIA)
   services.xserver = {
       enable = true;
-      displayManager.startx.enable = true;
-      windowManager.bspwm.enable = true; 
+      displayManager.gdm.enable = true;
+      windowManager.bspwm.enable = true;
+      desktopManager.gnome.enable = true;
       videoDrivers = [ "nvidia" ];  
       layout = "latam";
       excludePackages = [ pkgs.xterm ];
