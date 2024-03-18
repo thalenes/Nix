@@ -12,13 +12,15 @@
   
   # List of user programs
   home.packages = with pkgs; [
+    brave
+    spotify
+    telegram-desktop
+    discord
     neofetch
     vscode
-    kotlin
-    jdk17
-    nodejs_21
-    unstable.flutter
-    unstable.jetbrains.idea-community
+    lutris
+    steam
+    heroic
   ];
   
   
