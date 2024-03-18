@@ -91,12 +91,6 @@
      flameshot
      pavucontrol
 
-     #User
-     ungoogled-chromium
-     spotify
-     discord
-     telegram-desktop
-
      #CLI
      git
      wget
@@ -104,7 +98,6 @@
      htop
 
      #GTK
-     papirus-icon-theme
      tokyo-night-gtk
      lxappearance
    ];
