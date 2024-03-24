@@ -14,14 +14,23 @@
   home.packages = with pkgs; [
     brave
     spotify
+    spotify-tray
     telegram-desktop
     discord
     neofetch
     vscode
+    jetbrains.idea-community
     lutris
-    steam
+    steam-run
     heroic
     libreoffice-still
+    musescore
+    obs-studio
+    gimp
+    libsForQt5.kdenlive
+    
+    logmein-hamachi
+    haguichi
   ];
   
   
