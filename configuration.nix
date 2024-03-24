@@ -31,6 +31,7 @@
   services = {
     blueman.enable = true;
     gvfs.enable = true;
+    logmein-hamachi.enable = true;
    };
  
   #Hostname
@@ -49,9 +50,9 @@
   #X11 (Because Wayland sucks, Chad Xorg+NVIDIA)
   services.xserver = {
       enable = true;
-      displayManager.gdm.enable = true;
+      displayManager.lightdm.enable = true;
       windowManager.bspwm.enable = true;
-      desktopManager.gnome.enable = true;
+     # desktopManager.gnome.enable = true;
       videoDrivers = [ "nvidia" ];  
       layout = "latam";
       excludePackages = [ pkgs.xterm ];
@@ -70,12 +71,11 @@
    };
 
   #User
-  users.users.thalene = {
+  users.users.farnese = {
      isNormalUser = true;
      extraGroups = [ "wheel" ];
      shell = pkgs.fish;
   };
-
 
   #PKG
   environment.systemPackages = with pkgs; [
@@ -86,25 +86,35 @@
      polybar
      picom
      rofi
-     xfce.thunar
-     xfce.thunar-volman
+     pcmanfm
      gnome.file-roller
      flameshot
+     scrot
      pavucontrol
-
+     etcher
+    
      #CLI
      git
      wget
      curl
      htop
+     openssl
+     #Lib
+     jdk17
+     jdk8
 
      #GTK
      tokyo-night-gtk
+     papirus-icon-theme
      lxappearance
    ];
 
   #Git
-  programs.ssh.enableAskPassword = false;
+  programs = { 
+    ssh.enableAskPassword = false; 
+    fish.enable = true;
+    steam.enable = true;
+   };
 
   #Fonts
   fonts.packages = with pkgs; [
